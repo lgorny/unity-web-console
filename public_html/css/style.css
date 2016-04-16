@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     min-height: 100%;
     width: : 100%;
@@ -9,111 +10,112 @@ html, body {
     font-family: monospace;
     text-decoration: none;
 }
-
 .container {
-  width: 50%;
-  height: 100%;
-  border-style: solid;
-  border-width: 0px 1px 0px 0px;
-  border-color: rgb(144, 144, 144);
+    width: 50%;
+    height: 100%;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    border-color: rgb(144, 144, 144);
 }
-
 .menu {
-  height: 16px;
-  background: rgb(235, 235, 235); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* Standard syntax */
-  border-style: solid;
-  border-width: 1px 0px 1px 0px;
-  border-color: rgb(144, 144, 144);
+    height: 16px;
+    background: rgb(235, 235, 235);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* Standard syntax */
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: rgb(144, 144, 144);
 }
-
 button.console-button {
-  font-family: Verdana;
-  font-size: 10px;
-  height: 16px;
-  float: left;
-  display: block;
-  background: rgb(235, 235, 235); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194)); /* Standard syntax */
-  border-style: solid;
-  border-width: 0px 1px 0px 0px;
-  border-color: rgb(144, 144, 144);
+    font-family: Verdana;
+    font-size: 10px;
+    height: 16px;
+    float: left;
+    display: block;
+    background: rgb(235, 235, 235);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(235, 235, 235), rgb(194, 194, 194));
+    /* Standard syntax */
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    border-color: rgb(144, 144, 144);
 }
-
 button.console-button:active {
-  background: rgb(235, 235, 235); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253)); /* Standard syntax */
+    background: rgb(235, 235, 235);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(233, 233, 233), rgb(253, 253, 253));
+    /* Standard syntax */
 }
-
 button.console-button:focus {
-  outline:0;
+    outline: 0;
 }
-
 .console {
-  float:left;
-  height: 100vh;
-  width: 100%;
-  font-family: monospace;
-  text-decoration: none;
-  border-style: solid;
-  border-width: 1px 0px 0px 0px;
-  border-color: rgb(85, 85, 85);
+    float: left;
+    height: 100vh;
+    width: 100%;
+    font-family: monospace;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: rgb(85, 85, 85);
 }
-
 .console-content {
-  height: 100vh;
-  overflow:auto;
+    height: 100vh;
+    overflow: auto;
 }
-
 .log {
-  clear: left;
-  padding: 0px;
-  height: auto;
-  width: 100%;
-  text-align: left;
-  font-family: monospace;
-  text-decoration: none;
-  background: none;
-  border: none;
-  color: rgb(0, 0, 0);
+    clear: left;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+    text-align: left;
+    font-family: monospace;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
 }
-
 .log.select {
-  background-color: rgb(50, 100, 184);
-  color: rgb(255, 255, 255);
+    background-color: rgb(50, 100, 184);
+    color: rgb(255, 255, 255);
 }
-
 .log.second {
-  background-color: rgb(215, 215, 215);
+    background-color: rgb(215, 215, 215);
 }
-
 .log.second.select {
-  background-color: rgb(50, 100, 184);
-  color: rgb(255, 255, 255);
+    background-color: rgb(50, 100, 184);
+    color: rgb(255, 255, 255);
 }
-
 button:focus {
-  outline:0;
+    outline: 0;
 }
-
 .log-message {
-  margin-top: 5px;
-  margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-
 .log-icon {
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
 }
