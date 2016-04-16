@@ -1,11 +1,10 @@
-var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080
-var IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+const config = require("./config");
 
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const bodyParser = require('body-parser');
 
 app.use(express.static('public_html'));
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -23,6 +22,6 @@ function onNewLog(req, res)
   res.sendStatus(200);
 }
 
-http.listen(PORT, IP, function(){
-  console.log( "Listening on " + IP + ":" + PORT );
+http.listen(config.SERVER_PORT, config.SERVER_IP, function(){
+  console.log( "Listening on " + config.SERVER_IP + ":" + config.SERVER_PORT );
 });
