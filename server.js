@@ -1,3 +1,6 @@
+var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
@@ -20,6 +23,6 @@ function onNewLog(req, res)
   res.sendStatus(200);
 }
 
-http.listen(8080, function(){
-  console.log('listening on *:8080');
+http.listen(PORT, IP, function(){
+  console.log( "Listening on " + IP + ":" + PORT );
 });
