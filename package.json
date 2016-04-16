@@ -1,0 +1,17 @@
+{
+  "name": "unity-remote-console",
+  "version": "1.0.0",
+  "description": "Server for handle logs from Unity aplications",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Łukasz Górny <contact@lukaszgorny.pl>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
