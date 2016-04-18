@@ -7,8 +7,6 @@ body {
     margin: 0;
     padding: 0;
     background: rgb(221, 221, 221);
-    font-family: monospace;
-    text-decoration: none;
 }
 .container {
     width: 50%;
@@ -34,7 +32,7 @@ body {
     border-color: rgb(144, 144, 144);
 }
 button.console-button {
-    font-family: Verdana;
+    font-family: Verdana, Geneva, sans-serif;
     font-size: 10px;
     height: 16px;
     float: left;
@@ -72,8 +70,6 @@ button.console-button:focus {
     float: left;
     height: 100vh;
     width: 100%;
-    font-family: monospace;
-    text-decoration: none;
     border-style: solid;
     border-width: 1px 0px 0px 0px;
     border-color: rgb(85, 85, 85);
@@ -88,8 +84,7 @@ button.console-button:focus {
     height: auto;
     width: 100%;
     text-align: left;
-    font-family: monospace;
-    text-decoration: none;
+    font-size: 11px;
     background: none;
     border: none;
     color: rgb(0, 0, 0);
@@ -109,6 +104,7 @@ button:focus {
     outline: 0;
 }
 .log-message {
+    font-family: Verdana, Geneva, sans-serif;
     margin-top: 5px;
     margin-bottom: 5px;
 }

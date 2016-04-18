@@ -8,7 +8,10 @@ var LogType = {
 
 var UnityWebConsole = {
     logs: [],
+    logsCount: 0,
+    maxLogsDisplayed: 1000,
     logsContainer: null,
+    selectedLog: null,
 
     onDOMContentLoaded: function () {
         UnityWebConsole.initSocket();
@@ -24,13 +27,18 @@ var UnityWebConsole = {
 
     addLog: function (msg, stack, type) {
 
+        if (UnityWebConsole.logs.length >= UnityWebConsole.maxLogsDisplayed) {
+            UnityWebConsole.logs.shift();
+            UnityWebConsole.logsContainer.removeChild(UnityWebConsole.logsContainer.childNodes[0]);
+        }
+
         var scrollToBottom = false;
         if (UnityWebConsole.logsContainer.scrollHeight - UnityWebConsole.logsContainer.scrollTop <= UnityWebConsole.logsContainer.clientHeight)
             scrollToBottom = true;
 
         var log = document.createElement("button");
 
-        if (UnityWebConsole.logs.length % 2 == 1)
+        if (UnityWebConsole.logsCount % 2 == 1)
             log.className = "log second";
         else
             log.className = "log";
@@ -47,20 +55,33 @@ var UnityWebConsole = {
 
         log.appendChild(imageContainer);
         log.appendChild(message);
-        log.addEventListener("click", function (e) {
-            e.currentTarget.className = "log select";
-        });
-        document.getElementById('logs').appendChild(log);
+        log.addEventListener("click", UnityWebConsole.onLogClick);
 
-        UnityWebConsole.logs.push(log);
+        UnityWebConsole.logsContainer.appendChild(log);
+
+        UnityWebConsole.logs.push({
+            m: msg,
+            s: stack,
+            t: type
+        });
 
         if (scrollToBottom)
             UnityWebConsole.logsContainer.scrollTop = UnityWebConsole.logsContainer.scrollHeight;
+
+        UnityWebConsole.logsCount++;
     },
 
     onLog: function (data) {
         var dataParsed = JSON.parse(data);
         UnityWebConsole.addLog(dataParsed.m, dataParsed.s, dataParsed.t);
+    },
+
+    onLogClick: function (e) {
+        if (UnityWebConsole.selectedLog)
+            UnityWebConsole.selectedLog.className = UnityWebConsole.selectedLog.className.replace(" select", "");
+
+        UnityWebConsole.selectedLog = e.currentTarget;
+        UnityWebConsole.selectedLog.className += " select";
     }
 };
 
